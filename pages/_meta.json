@@ -5,9 +5,9 @@
     "display": "hidden"
   },
   "intro": "Introduction",
-  "stack": "The Rollkit Stack",
+  "stack": "The Rollkit stack",
   "transaction-flow": "Transaction flow",
-    "---": {
+  "---": {
     "type": "separator"
   },
   "tutorials": "Tutorials",
