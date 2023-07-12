@@ -1,11 +1,14 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "another": "The Rollkit Stack",
+  "transaction-flow": "Transaction flow",
+  "tutorials": "Tutorials",
   "about": {
     "title": "About",
     "type": "page"
   },
+  "faqs": "FAQs",
+  "demo": "DEMO",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
