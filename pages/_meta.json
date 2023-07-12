@@ -1,11 +1,18 @@
 {
-  "index": "Introduction",
-  "another": "The Rollkit Stack",
+  "index": {
+    "title": "Rollkit",
+    "type": "page",
+    "display": "hidden"
+  },
+  "intro": "Introduction",
+  "stack": "The Rollkit Stack",
   "transaction-flow": "Transaction flow",
+    "---": {
+    "type": "separator"
+  },
   "tutorials": "Tutorials",
-  "about": {
-    "title": "About",
-    "type": "page"
+    "----": {
+    "type": "separator"
   },
   "faqs": "FAQs",
   "demo": "DEMO",
