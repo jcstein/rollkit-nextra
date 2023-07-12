@@ -11,7 +11,7 @@
   "intro": "Introduction",
   "stack": "The Rollkit stack",
   "transaction-flow": "Transaction flow",
-   "-- Building with Rollkit --": {
+  "-- Building with Rollkit --": {
     "type": "separator",
     "title": "Building with Rollkit"
   },
