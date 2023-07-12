@@ -1,4 +1,8 @@
 {
+   "-- Getting Started --": {
+    "type": "separator",
+    "title": "Getting Started"
+  },
   "index": {
     "title": "Rollkit",
     "type": "page",
@@ -7,12 +11,17 @@
   "intro": "Introduction",
   "stack": "The Rollkit stack",
   "transaction-flow": "Transaction flow",
+   "-- Building with Rollkit --": {
+    "type": "separator",
+    "title": "Building with Rollkit"
+  },
+  "tutorials": "Tutorials",
   "---": {
     "type": "separator"
   },
-  "tutorials": "Tutorials",
-    "----": {
-    "type": "separator"
+  "-- Information --": {
+    "type": "separator",
+    "title": "Information"
   },
   "faqs": "FAQs",
   "demo": "DEMO",
