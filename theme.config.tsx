@@ -55,7 +55,6 @@ const config: DocsThemeConfig = {
     )
 },
   gitTimestamp: false,
-  
 }
 
 export default config
