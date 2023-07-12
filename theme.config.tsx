@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -15,6 +16,7 @@ const config: DocsThemeConfig = {
       </span>
     </>
   ),
+  logoLink: '/',
   project: {
     link: 'https://github.com/rollkit/rollkit-nextra',
   },
@@ -22,24 +24,41 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   docsRepositoryBase: 'https://github.com/jcstein/rollkit-nextra',
-  footer: {
-    text: 'Rollkit',
+  useNextSeoProps() {
+    const { route } = useRouter()
+    if (route !== '/') {
+        return {
+            titleTemplate: '%s – Rollkit'
+        }
+    }
+  },
+  banner: {
+    key: '2.0-release',
+    text: <a href="https://blog.celestia.org" target="_blank">
+      🎉 Introducing Rollkit! 
+    </a>,
   },
   sidebar: {
     titleComponent({ title, type }) {
-      if (type === 'separator') {
-        return (
-          <div style={{ background: 'cyan', textAlign: 'center' }}>{title}</div>
-        )
-      }
-      if (title === 'FAQs') {
-        return <>❓ {title}</>
-      }
-      return <>🗞️ {title}</>
+        if (type === 'separator') {
+            return <span className="cursor-default">{title}</span>
+        }
+        return <>{title}</>
     },
+    defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
+  footer: {
+    text: (
+        <div>
+            <p>
+                © {new Date().getFullYear()} Rollkit
+            </p>
+        </div>
+    )
+},
   gitTimestamp: false,
+  
 }
 
 export default config
