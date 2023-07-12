@@ -16,7 +16,7 @@ const config: DocsThemeConfig = {
     </>
   ),
   project: {
-    link: 'https://github.com/jcstein/rollkit-nextra',
+    link: 'https://github.com/rollkit/rollkit-nextra',
   },
   chat: {
     link: 'https://discord.com',
