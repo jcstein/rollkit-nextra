@@ -30,8 +30,8 @@ const config: DocsThemeConfig = {
     }
   },
   banner: {
-    key: '2.0-release',
-    text: <a href="https://blog.celestia.org" target="_blank">
+    key: 'alpha-release',
+    text: <a href="https://blog.celestia.org/introducing-rollkit-a-modular-rollup-framework/" target="_blank">
       🎉 Introducing Rollkit! 
     </a>,
   },
@@ -55,6 +55,9 @@ const config: DocsThemeConfig = {
     )
 },
   gitTimestamp: false,
+  nextThemes: {
+    defaultTheme: 'dark',
+  }
 }
 
 export default config
