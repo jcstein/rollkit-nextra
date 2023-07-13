@@ -23,54 +23,41 @@ export function Cobe() {
   useEffect(() => {
     let phi = 0;
     let width = 0;
-    let dir = 0; // 0 is smaller, 1 is larger.
-    let mm = 5000;
-    let i = 0;
-    let flip = 0;
-    const onResize = () =>
-      canvasRef.current && (width = canvasRef.current.offsetWidth);
-    window.addEventListener("resize", onResize);
-    onResize();
+    const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth)
+    window.addEventListener('resize', onResize)
+    onResize()
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: width * 2,
       height: width * 2,
-      phi: 6.28,
-      theta: -1.5,
-      dark: 1,
-      diffuse: 5,
-      mapSamples: 0.0,
-      mapBrightness: 4.0,
-      mapBaseBrightness: 1,
-      baseColor: [87 / 255, 190 / 255, 229 / 255],
-      markerColor: [87 / 255, 190 / 255, 229 / 255], // 87 190 229
-      glowColor: [87 / 255, 190 / 255, 229 / 255],
+      phi: 1.32,
+      theta: 0.25,
+      dark: 1.00,
+      diffuse: 0.69,
+      mapSamples: 42000,
+      mapBrightness: 0.42,
+      mapBaseBrightness: 0.21,
+      baseColor: [255 / 255, 255 / 255, 255 / 255],
+      markerColor: [255 / 255, 255 / 255, 255 / 255],
+      glowColor: [0, 255 / 255, 0],
       markers: [],
-      opacity: 0,
+      markerSize: 0.05,
+      scale: 1,
+      opacity: 1,
       onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
-        state.phi = phi + r.get();
-        phi += 0.005;
-        state.width = width * 2;
-        state.height = width * 2;
-        state.mapSamples = mm * (i ** (6 / 5) / 25000);
-        state.diffuse = 6;
-        if (dir === 0) {
-          i--;
-          if (i <= 0) {
-            dir = 1;
-          }
-        } else {
-          i++;
-          if (i >= 1200) {
-            dir = 0;
-          }
-        }
-      },
-    });
-    setTimeout(() => (canvasRef.current.style.opacity = "1"));
-    return () => globe.destroy();
+        // This prevents rotation while dragging
+        if (!pointerInteracting.current) {
+          // Called on every animation frame.
+          // `state` will be an empty object, return updated params.
+          phi += 0.005
+        } 
+        state.phi = phi + r.get()
+        state.width = width * 2
+        state.height = width * 2
+      }
+    })
+    setTimeout(() => canvasRef.current.style.opacity = '1')
+    return () => globe.destroy()
 
 }, []);
 return (
@@ -172,9 +159,9 @@ import Link from "next/link";
       Github
     </Link>
   </div>
-  <div style={{ marginTop: "2rem" }} />
+  {/* <div style={{ marginTop: "2rem" }} /> */}
   {/* <Link
-    href="https://github.com/berachain/polaris/blob/main/eth/LICENSE"
+    href="https://github.com/rollkit/rollkit/blob/main/LICENSE"
     target="_blank"
     style={{
       textDecoration: "underline",
@@ -183,7 +170,7 @@ import Link from "next/link";
       fontSize: 14,
     }}
   >
-    Polaris Ethereum is currently licensed under BUSL-1.1 →
+    Rollkit is currently licensed under APACHE-2.0 →
   </Link> */}
 </div>
 
