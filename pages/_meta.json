@@ -1,34 +1,28 @@
 {
-   "-- Getting Started --": {
+   "-- getting started --": {
     "type": "separator",
-    "title": "Getting Started"
+    "title": "getting started"
   },
   "index": {
-    "title": "Rollkit",
+    "title": "quasar",
     "type": "page",
     "display": "hidden"
   },
-  "intro": "Introduction",
-  "stack": "The Rollkit stack",
-  "transaction-flow": "Transaction flow",
-  "-- Building with Rollkit --": {
-    "type": "separator",
-    "title": "Building with Rollkit"
+  "intro": "introduction ✨",
+  "installation": "installation 📦",
+  "video-tutorial": {
+    "title": "video tutorial 📺 ↗",
+    "type": "page",
+    "href": "https://twitter.com/JoshCStein/status/1666328587400630272?s=20",
+    "newWindow": true
   },
-  "tutorials": "Tutorials",
-  "---": {
+   "---": {
     "type": "separator"
   },
-  "-- Information --": {
+  "-- information --": {
     "type": "separator",
-    "title": "Information"
+    "title": "information"
   },
-  "faqs": "FAQs",
-  "demo": "DEMO",
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
-  }
+  "faqs": "faqs",
+  "demo": "nextra demo page"
 }

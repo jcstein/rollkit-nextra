@@ -3,10 +3,10 @@ import styles from './style.module.css'
 import TextTransition, { presets } from "react-text-transition";
 
 const TEXTS = [
-    "Celestia",
-    "Ethereum",
-    "Bitcoin",
-    "Whatever",
+    "boats",
+    "trains",
+    "planes",
+    "whatever",
 ];
 
 const Text = () => {
@@ -23,7 +23,7 @@ const Text = () => {
     return (
         
         <h1 className={styles.subheader}>
-            Rollups on
+            light nodes on
             <TextTransition springConfig={presets.wobbly} inline style={{marginLeft: '4px'}}> 
              {TEXTS[index % TEXTS.length]}
             </TextTransition>
