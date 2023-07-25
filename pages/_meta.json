@@ -1,6 +1,6 @@
 {
    "-- Getting Started --": {
-    "type": "separator",
+    "type": "page",
     "title": "Getting Started"
   },
   "index": {
@@ -23,12 +23,13 @@
     "type": "separator",
     "title": "Information"
   },
+  "glossary": "Glossary",
   "faqs": "FAQs",
   "demo": "DEMO",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://twitter.com/RollkitDev",
     "newWindow": true
   }
 }

@@ -15,12 +15,12 @@ const config: DocsThemeConfig = {
   ),
   logoLink: '/',
   project: {
-    link: 'https://github.com/jcstein/rollkit-nextra',
+    link: 'https://github.com/rollkit/docs',
   },
   chat: {
     link: 'https://discord.com',
   },
-  docsRepositoryBase: 'https://github.com/jcstein/rollkit-nextra',
+  docsRepositoryBase: 'https://github.com/rollkit/docs',
   useNextSeoProps() {
     const { route } = useRouter()
     if (route !== '/') {
