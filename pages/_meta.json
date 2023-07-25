@@ -4,54 +4,26 @@
     "type": "page",
     "display": "hidden"
   },
-
-  "separator_intro": {
-    "type": "separator",
-    "title": "Intro"
-  },
-
-  "intro": {
-    "title": "Introduction"
-  },
-
-  "separator_1": {
-    "type": "separator"
-  },
-
-  "separator_building_with_rollkit": {
+  "intro": "Introduction",
+  
+  "-- Building with Rollkit": {
     "type": "separator",
     "title": "Building with Rollkit"
   },
+  "tutorials": "Tutorials",
 
-  "tutorials": {
-    "title": "Tutorials"
-  },
-
-  "separator_2": {
-    "type": "separator"
-  },
-
-  "separator_information": {
+  "-- Information": {
     "type": "separator",
     "title": "Information"
   },
-
-  "glossary": {
-    "title": "Glossary"
+  "glossary": "Glossary",
+  "faqs": "FAQs",
+  
+  "-- More": {
+    "type": "separator",
+    "title": "More"
   },
-
-  "faqs": {
-    "title": "FAQs"
-  },
-
-  "separator_3": {
-    "type": "separator"
-  },
-
-  "demo": {
-    "title": "DEMO"
-  },
-
+  "demo": "DEMO",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
