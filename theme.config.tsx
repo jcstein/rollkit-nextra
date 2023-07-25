@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const config: DocsThemeConfig = {
   head: (
     <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta property="og:title" content="Rollkit" />
       <meta property="og:description" content="The open modular framework for sovereign rollups." />
     </>
