@@ -28,13 +28,6 @@ graph TB
   style DAL stroke:currentColor, fill:#D8BFD8
 ```
 
-The Shared Sequencer Aggregates Transactions and posts the ordered Batch to the underlying DA-Layer. 
-
-> To unlock a web2 equivalent UX, the shared sequencers […] can provide fast soft commitments. These soft commitments provide some arbitrary promise of the final ordering of transactions, and can be used to create prematurely updated versions of the state. As soon as the blockdata has been confirmed to be posted on the baselayer, the state can be considered final.
-> 
-
-The Shared Sequencer does Inclusion and Ordering.
-
 ### Legend
 
 | Component | Color Code |
@@ -46,7 +39,12 @@ The Shared Sequencer does Inclusion and Ordering.
 
 ## Aggregation
 
-The DA-Layer is the Aggregator. It does Inclusion and Ordering.
+The Shared Sequencer Aggregates Transactions and posts the ordered Batch to the underlying DA-Layer. 
+
+> To unlock a web2 equivalent UX, the shared sequencers […] can provide fast soft commitments. These soft commitments provide some arbitrary promise of the final ordering of transactions, and can be used to create prematurely updated versions of the state. As soon as the block data has been confirmed to be posted on the base layer, the state can be considered final.
+> 
+
+The Shared Sequencer does Inclusion and Ordering.
 
 ## Header Production
 
@@ -54,7 +52,7 @@ Each Full Node has to execute all transactions. There are no Light Nodes in this
 
 ## Censorship Resistance
 
-Based rollups enjoy the same censorship resistance as the DA-Layer.
+Lets assume $L_{ss}$ is the liveness of the Shared Sequencer and the $L_{da}$ is the liveness of the DA-Layer. Then the liveness of this scheme is $L = Min[L_{ss},L_{da}]$ saying if one of the Systems has a liveness failure the Rollup has a liveness failure. If the Shared Sequencer fails than we cannot proceed with the Rollup. If the DA-Layer fails we could continue with the Shared Sequencers Soft Commitments. We would inherit the consensuses and data-availability from the Shared Sequencer which would be worse than the original Data-Availability Layer.
 
 ## Liveness
 
@@ -62,9 +60,10 @@ Based rollups enjoys the same liveness guarantees as the DA-Layer (Based Rollups
 
 ## Rollup Light Nodes
 
-This design has no Rollup Light Nodes.
+N/A
 
 ## Smallest Trust-Minimized Setup
 
-DA-Layer Light Node + Rollup Full Node
+DA-Layer Light Node + Shared Sequencer Light Node +  Rollup Full Node
 
+We need a Shared Sequencer Light Node to validate the Headers of the Shared Sequencer. We made an assumption in the beginning that the order is fixed by the ordering of the shared sequencer. The Shared Sequencer will have a cryptographic commitment of the order of the Transaction inside the Shared Sequencer Header. This way we can confirm that the batch that we receive or read from the DA-Layer is the one created by the Shared Sequencer.
