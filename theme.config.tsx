@@ -3,6 +3,13 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Rollkit" />
+      <meta property="og:description" content="The open modular framework for sovereign rollups." />
+    </>
+  ),
   logo: (
     <>
       <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
