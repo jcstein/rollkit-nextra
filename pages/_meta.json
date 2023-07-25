@@ -1,17 +1,17 @@
 {
-   "-- Getting Started --": {
-    "type": "page",
-    "title": "Getting Started"
-  },
   "index": {
     "title": "Rollkit",
     "type": "page",
     "display": "hidden"
   },
+  "-- Intro --": {
+    "type": "separator",
+    "title": "Intro"
+  },
   "intro": "Introduction",
-  "what-is-rollkit": "What is Rollkit?",
-  "stack": "The Rollkit stack",
-  "transaction-flow": "Transaction flow",
+  "----": {
+    "type": "separator"
+  },
   "-- Building with Rollkit --": {
     "type": "separator",
     "title": "Building with Rollkit"
@@ -26,11 +26,14 @@
   },
   "glossary": "Glossary",
   "faqs": "FAQs",
+  "-----": {
+    "type": "separator"
+  },
   "demo": "DEMO",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/RollkitDev",
+    "href": "https://t.me/rollkit",
     "newWindow": true
   }
 }
