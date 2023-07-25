@@ -9,6 +9,7 @@
     "display": "hidden"
   },
   "intro": "Introduction",
+  "what-is-rollkit": "What is Rollkit?",
   "stack": "The Rollkit stack",
   "transaction-flow": "Transaction flow",
   "-- Building with Rollkit --": {
