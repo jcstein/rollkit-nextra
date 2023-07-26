@@ -1,15 +1,52 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
+import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  head: (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <meta property="og:title" content="Rollkit" />
-      <meta property="og:description" content="The open modular framework for sovereign rollups." />
-    </>
-  ),
+  head: function useHead() {
+    const { title } = useConfig()
+    const { route } = useRouter()
+    const socialCard =
+      route === '/' || !title
+        ? '/Rollkit-og.png'
+        : `https://nextra.site/api/og?title=${title}`
+    return (
+      <>
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="theme-color" content="#fff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta property="og:title" content="Rollkit" />
+        <meta property="og:description" content="The open modular framework for sovereign rollups." />
+        <meta property="description" content="The open modular framework for sovereign rollups." />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={socialCard} />
+        <meta name="twitter:site:domain" content="rollkit.dev" />
+        <meta name="twitter:url" content="https://rollkit.dev" />
+        <meta
+          name="og:title"
+          content={title ? title + ' – Rollkit' : 'Rollkit'}
+        />
+        <meta name="og:image" content={socialCard} />
+        <meta name="apple-mobile-web-app-title" content="Rollkit" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link
+          rel="icon"
+          href="/favicon-dark.svg"
+          type="image/svg+xml"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
+          rel="icon"
+          href="/favicon-dark.png"
+          type="image/png"
+          media="(prefers-color-scheme: dark)"
+        />
+      </>
+    )
+  },
   logo: (
     <>
       <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,6 +84,7 @@ const config: DocsThemeConfig = {
       🎉 Introducing Rollkit! 
     </a>,
   },
+  // faviconGlyph: '🗞️',
   sidebar: {
     titleComponent({ title, type }) {
         if (type === 'separator') {
