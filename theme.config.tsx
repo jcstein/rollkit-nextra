@@ -6,11 +6,7 @@ import { useConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   head: function useHead() {
     const { title } = useConfig()
-    const { route } = useRouter()
-    const socialCard =
-      route === '/' || !title
-        ? '/Rollkit-og.png'
-        : `https://nextra.site/api/og?title=${title}`
+    const socialCard = '/Rollkit-og.png'
     return (
       <>
         <meta name="msapplication-TileColor" content="#fff" />
